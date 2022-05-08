@@ -20,7 +20,7 @@ def checkWPA(passw):
     wrdl = open('password.txt','w')
     print(passw, file=wrdl)
     wrdl.close()
-    cmd = f"aircrack-ng evil.cap -b '5C:F9:6A:FC:17:2F' -w password.txt"
+    cmd = f"aircrack-ng evil.cap -b '{target}' -w password.txt"
     out = run(cmd,stdout=PIPE,shell=True)
     output = out.stdout
     code = out.returncode

@@ -78,7 +78,7 @@ All you have to do is:
  - either use `adb shell` then `su` or install sudo and su on termux
  - rename `dnsmasq` in `/bin/` to `/bin/dnsmasq.bin`  
    `mv /bin/dnsmasq /bin/dnsmasq.bin`
- - copy dnsmasq.sh to /bin/ rename to dnsmasq give the right permission
+ - copy dnsmasq.sh to /bin/ rename to dnsmasq give the right permission  
    `cp /sdcard/dnsmasq.sh /bin/dnsmasq`  
    `chmod +x /bin/dnsmasq` i set the permissions as dnsmasq.bin
  - there should be a log file in /data/misc/wifi when dnsmasq.sh is running
@@ -123,7 +123,8 @@ NOTE: if you're planning to use another ip-range change index.html#L137 to where
 
 1. `pip install flask`
 2. copy your target handshake and rename to 'evil.cap'  
-   `cp path/handshake.cap .` `mv handshake.cap evil.cap`
+   `cp path/handshake.cap .`  
+   `mv handshake.cap evil.cap`
 3. Set your target MAC address use aircrack to get it  
    ```bash
    $ aircrack-ng evil.cap
@@ -170,6 +171,11 @@ NOTE: if you're planning to use another ip-range change index.html#L137 to where
 9. if you got the password you should stop aireplay
 
 enjoy your wifi!
+
+# Credits
+ - [@athanstan](https://github.com/athanstan/EvilTwin_AP_CaptivePortal)
+   @athanstan i copied the upgrading animation from him,  
+   he also has another good repos check it out!
 
 pm on telegram for any queries [@Pine_Orange](t.me/Pine_Orange) or [@xd2222](t.me/xd2222)
 
