@@ -174,8 +174,8 @@ enjoy your wifi!
 
 # Credits
  - [@athanstan](https://github.com/athanstan/EvilTwin_AP_CaptivePortal)
-   @athanstan i copied the upgrading animation from him,  
-   he also has another good repos check it out!
+   i copied the upgrading animation from him,  
+   he also has good repos check it out!
 
 pm on telegram for any queries [@Pine_Orange](t.me/Pine_Orange) or [@xd2222](t.me/xd2222)
 
